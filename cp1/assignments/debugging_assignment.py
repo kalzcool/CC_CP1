@@ -11,7 +11,7 @@ quantity = int(input("How many would you like? ")) #made quantity int
 
 total = price * quantity
 
-discounted_total = total - 2 * 0.10
+discounted_total = total*.90
 
 tax_rate = 0.08
 total_with_tax = discounted_total + (discounted_total * tax_rate)
