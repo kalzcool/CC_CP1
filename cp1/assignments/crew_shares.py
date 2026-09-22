@@ -1,10 +1,20 @@
 #CC crew shares
 import random
-num_pirates= int(input("How many pirates including Yondu and Peter: "))
+while True:
+    num_pirates= input("How many pirates including Yondu and Peter: ")
+
+    if num_pirates.isdigit():
+        num_pirates=int(num_pirates)
+        break
+
+    else:
+        print("Nope try again")
+ 
 num_units= random.randint(500, 5000)
-yondus_share=round( num_units*.13, 2) 
-peters_share=round( (num_units- yondus_share)*.11, 2)
-left_total= num_units -(yondus_share+peters_share)
+left_units= num_units -((num_pirates-2)*3)
+yondus_share=round( left_units*.13 +3, 2) 
+peters_share=round( (left_units- yondus_share)*.11 +3, 2)
+left_total= left_units -(yondus_share+peters_share)
 crew_share= round(left_total/ num_pirates, 2 )
 
 print(f"Pirates = {num_pirates}")
