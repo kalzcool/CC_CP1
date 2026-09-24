@@ -8,3 +8,10 @@ age= -18 # only number that will not be true is 0, all strings are true unless i
 if 18 < age: #boolean equasion, always resulting in true or false. used in control structures to make it do different things 
     print("You are an adult ")
 print(bool(age))
+
+grade= 90
+
+if grade >= 70:
+    print("You are passing the class")
+else:
+    print("You are not passing the class")
